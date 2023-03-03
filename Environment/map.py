@@ -3,6 +3,7 @@ import numpy as np
 
 
 def get_map(c=5):
+    
     # scale = 3
     layout = np.zeros((100*c,100*c,3))
     # Obstacle 1 
@@ -23,8 +24,7 @@ def set_goal_node(map,x,y):
     cv2.circle(map, (x,y),5,(0,0,255),-1)    
     
 def isObstacle(map,x,y): 
-    print(map[x,y,:])
-    if np.array_equal(map[499-y,x,:], [255,255,255]):
-        print("Obstacle space")
+    if np.array_equal(map[y,x,:], [255,255,255]):
+        # print("Obstacle space")
         return True
     return False

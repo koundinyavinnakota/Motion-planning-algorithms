@@ -11,6 +11,7 @@ def calculateTotalCost(node,goal_node,c2c):
     
     node.g = c2c + node.parent.g
     node.h = np.sqrt((node.x - goal_node.x)**2 + (node.y - goal_node.y)**2)
+    # node.h = 0
     node.f = node.g + node.h
     return node.f
 def checkInOpenList(openlist, node):
@@ -63,14 +64,14 @@ def astar(start_node,goal_node,map):
                 else:
                     # print(calculateTotalCost(temp_node,goal_node,cost_map[c2c]))
                     open_list.put((calculateTotalCost(temp_node,goal_node,cost_map[c2c]),temp_node))
-                    cv2.circle(map, (temp_node.x, temp_node.y),2,(255,0,0),-1)
+                    cv2.circle(map, (temp_node.x, temp_node.y),0,(255,0,0),-1)
                     cv2.imshow("cunt node", map)
                     cv2.waitKey(1)                    
         closed_list.append(cur_node[1])
         if goal_reached:
             closed_list.append(goal_node)
         
-    cv2.waitKey(0)
+    # cv2.waitKey(0)
     return closed_list
                 
                 
