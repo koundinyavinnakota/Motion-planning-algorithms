@@ -49,3 +49,12 @@ sudo apt install libopencv-dev
 ```
 sudo apt install -y g++
 ```
+## To Run the Program in C++:
+```
+cd /A-star
+
+g++ main.cpp -o astar `pkg-config --cflags --libs opencv4` -std=c++17
+
+./astar
+
+```
