@@ -40,6 +40,10 @@ cmake -DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib-4.x/modules ../opencv-4.x
 
 # Build
 cmake --build .
+
+#To install openCV headers
+sudo apt install libopencv-dev
+
 ```
 ## Install compiler
 ```
