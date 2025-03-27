@@ -50,7 +50,7 @@ sudo apt install libopencv-dev
 sudo apt install -y g++
 ```
 
-## To check the map:
+## To check the map in cpp:
 ```
 cd /Environment
 
