@@ -49,6 +49,15 @@ sudo apt install libopencv-dev
 ```
 sudo apt install -y g++
 ```
+
+## To check the map:
+```
+cd /Environment
+
+g++ Map.cpp -o Map `pkg-config --cflags --libs opencv4` -std=c++17
+
+./Map
+```
 ## To Run the Program in C++:
 ```
 cd /A-star
