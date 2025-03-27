@@ -67,3 +67,13 @@ g++ main.cpp -o astar `pkg-config --cflags --libs opencv4` -std=c++17
 ./astar
 
 ```
+
+## To Run program in Python
+```
+sudo apt-get install python3-opencv
+
+sudo apt install python3-numpy
+
+cd A-star/
+python3 main.py
+```
